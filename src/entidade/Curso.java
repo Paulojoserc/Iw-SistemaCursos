@@ -6,13 +6,11 @@ public class Curso {
 private String nome;
 private String turno;
 private Integer horasPorAula;
-private Integer cargoHoraria;
+private Integer cargaHoraria;
 private LocalDate dataInicio;
 private LocalDate dataFim;
 
-public Curso() {
-	
-}
+public Curso() {}
 
 public Curso(String nome, String turno, Integer horasPorAula, Integer cargoHoraria, LocalDate dataInicio,
 		LocalDate dataFim) {
@@ -20,7 +18,7 @@ public Curso(String nome, String turno, Integer horasPorAula, Integer cargoHorar
 	this.nome = nome;
 	this.turno = turno;
 	this.horasPorAula = horasPorAula;
-	this.cargoHoraria = cargoHoraria;
+	this.cargaHoraria = cargoHoraria;
 	this.dataInicio = dataInicio;
 	this.dataFim = dataFim;
 }
@@ -50,11 +48,11 @@ public void setHorasPorAula(Integer horasPorAula) {
 }
 
 public Integer getCargoHoraria() {
-	return cargoHoraria;
+	return cargaHoraria;
 }
 
 public void setCargoHoraria(Integer cargoHoraria) {
-	this.cargoHoraria = cargoHoraria;
+	this.cargaHoraria = cargoHoraria;
 }
 
 public LocalDate getDataInicio() {
@@ -73,4 +71,9 @@ public void setDataFim(LocalDate dataFim) {
 	this.dataFim = dataFim;
 }
 
+@Override
+public String toString() {
+	return "Curso [nome=" + nome + ", turno=" + turno + ", horasPorAula=" + horasPorAula + ", cargaHoraria="
+			+ cargaHoraria + ", dataInicio=" + dataInicio + ", dataFim=" + dataFim + "]";
+}
 }

@@ -1,26 +1,30 @@
 package entidade;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Aluno extends Pessoa {
-	List<Curso> turma = new ArrayList<Curso>();
-	
-	public Aluno() {
-		
+	private List<Curso> cursos;
+
+	public Aluno(Long id, String nome, LocalDate dataDeNascimento, Endereco endereco, Contato contato,
+			List<Curso> cursos) {
+		super(id, nome, dataDeNascimento, endereco, contato);
+		this.cursos = cursos;
 	}
 
-	public Aluno(List<Curso> turma) {
-		super();
-		this.turma = turma;
+	public List<Curso> getCursos() {
+		return cursos;
 	}
 
-	public List<Curso> getTurma() {
-		return turma;
+	public void setCursos(List<Curso> cursos) {
+		this.cursos = cursos;
 	}
 
-	public void setTurma(List<Curso> turma) {
-		this.turma = turma;
+	@Override
+	public String toString() {
+		return "Aluno [cursos=" + cursos + ", getId()=" + getId() + ", getNome()=" + getNome()
+				+ ", getDataDeNascimento()=" + getDataDeNascimento() + ", getEndereco()=" + getEndereco()
+				+ ", getContato()=" + getContato() + "]";
 	}
 	
 }

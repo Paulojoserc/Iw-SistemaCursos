@@ -1,84 +1,89 @@
 package entidade;
 
 public class Endereco {
-private String Logradoro;
-private String NumeroLogradouro;
-private String Bairro;
-private String Cep;
-private String Municipio;
-private String Estado;
-private String Pais;
+private String logradouro;
+private String numeroLogradouro;
+private String bairro;
+private String cep;
+private String municipio;
+private String estado;
+private String pais;
 
 public Endereco() {
 	
 }
 
-public Endereco(String logradoro, String numeroLogradouro, String bairro, String cep, String municipio, String estado,
+public Endereco(String logradouro, String numeroLogradouro, String bairro, String cep, String municipio, String estado,
 		String pais) {
 	super();
-	Logradoro = logradoro;
-	NumeroLogradouro = numeroLogradouro;
-	Bairro = bairro;
-	Cep = cep;
-	Municipio = municipio;
-	Estado = estado;
-	Pais = pais;
+	this.logradouro = logradouro;
+	this.numeroLogradouro = numeroLogradouro;
+	this.bairro = bairro;
+	this.cep = cep;
+	this.municipio = municipio;
+	this.estado = estado;
+	this.pais = pais;
 }
 
 public String getLogradoro() {
-	return Logradoro;
+	return logradouro;
 }
 
 public void setLogradoro(String logradoro) {
-	Logradoro = logradoro;
+	this.logradouro = logradoro;
 }
 
 public String getNumeroLogradouro() {
-	return NumeroLogradouro;
+	return numeroLogradouro;
 }
 
 public void setNumeroLogradouro(String numeroLogradouro) {
-	NumeroLogradouro = numeroLogradouro;
+	this.numeroLogradouro = numeroLogradouro;
 }
 
 public String getBairro() {
-	return Bairro;
+	return bairro;
 }
 
 public void setBairro(String bairro) {
-	Bairro = bairro;
+	this.bairro = bairro;
 }
 
 public String getCep() {
-	return Cep;
+	return cep;
 }
 
 public void setCep(String cep) {
-	Cep = cep;
+	this.cep = cep;
 }
 
 public String getMunicipio() {
-	return Municipio;
+	return municipio;
 }
 
 public void setMunicipio(String municipio) {
-	Municipio = municipio;
+	this.municipio = municipio;
 }
 
 public String getEstado() {
-	return Estado;
+	return estado;
 }
 
 public void setEstado(String estado) {
-	Estado = estado;
+	this.estado = estado;
 }
 
 public String getPais() {
-	return Pais;
+	return pais;
 }
 
 public void setPais(String pais) {
-	Pais = pais;
+	this.pais = pais;
 }
 
+@Override
+public String toString() {
+	return "Endereco [logradouro=" + logradouro + ", numeroLogradouro=" + numeroLogradouro + ", bairro=" + bairro
+			+ ", cep=" + cep + ", municipio=" + municipio + ", estado=" + estado + ", pais=" + pais + "]";
+}
 }
